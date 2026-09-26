@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CyberMonitor | Security Dashboard</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <div>
+            <h1>CyberMonitor</h1>
+            <p>Security Monitoring Dashboard</p>
+        </div>
+
+        <div class="system-status">
+            <span class="status-dot"></span>
+            SYSTEM ONLINE
+        </div>
+
+    </header>
+
+    <main class="dashboard">
+
+        <section class="metrics-grid">
+
+            <article class="metric-card">
+
+                <div class="metric-header">
+                    <span>Total de Eventos</span>
+                    <span class="metric-icon">◉</span>
+                </div>
+
+                <strong id="total-events">0</strong>
+
+                <small>
+                    Eventos registrados
+                </small>
+
+            </article>
+
+            <article class="metric-card critical">
+
+                <div class="metric-header">
+                    <span>Críticos</span>
+                    <span class="metric-icon">!</span>
+                </div>
+
+                <strong id="critical-events">0</strong>
+
+                <small>
+                    Requer atenção imediata
+                </small>
+
+            </article>
+
+            <article class="metric-card high">
+
+                <div class="metric-header">
+                    <span>Alta Severidade</span>
+                    <span class="metric-icon">▲</span>
+                </div>
+
+                <strong id="high-events">0</strong>
+
+                <small>
+                    Eventos HIGH
+                </small>
+
+            </article>
+
+            <article class="metric-card warning">
+
+                <div class="metric-header">
+                    <span>Em Investigação</span>
+                    <span class="metric-icon">⌕</span>
+                </div>
+
+                <strong id="investigating-events">0</strong>
+
+                <small>
+                    Incidentes sendo analisados
+                </small>
+
+            </article>
+
+        </section>
+
+        <section class="analytics-grid">
+
+            <article class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Eventos por Severidade
+                        </h2>
+
+                        <p>
+                            Distribuição dos níveis de risco
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="severity-chart"
+                    class="bar-chart">
+                </div>
+
+            </article>
+
+            <article class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Tipos de Ameaça
+                        </h2>
+
+                        <p>
+                            Classificação dos eventos detectados
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="type-chart"
+                    class="bar-chart">
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="analytics-grid">
+
+            <article class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Status dos Incidentes
+                        </h2>
+
+                        <p>
+                            Estado atual dos eventos
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="status-grid">
+
+                    <div class="status-item">
+
+                        <span class="status-label">
+
+                            <span
+                                class="status-indicator open">
+                            </span>
+
+                            Open
+
+                        </span>
+
+                        <strong id="open-events">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <div class="status-item">
+
+                        <span class="status-label">
+
+                            <span
+                                class="status-indicator investigating">
+                            </span>
+
+                            Investigating
+
+                        </span>
+
+                        <strong id="investigating-status">
+                            0
+                        </strong>
+
+                    </div>
+
+                    <div class="status-item">
+
+                        <span class="status-label">
+
+                            <span
+                                class="status-indicator resolved">
+                            </span>
+
+                            Resolved
+
+                        </span>
+
+                        <strong id="resolved-events">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Protocolos
+                        </h2>
+
+                        <p>
+                            Protocolos envolvidos nos eventos
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="protocol-chart"
+                    class="protocol-list">
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="panel events-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Security Events
+                    </h2>
+
+                    <p>
+                        Eventos detectados pelo CyberMonitor
+                    </p>
+
+                </div>
+
+                <span
+                    id="event-count"
+                    class="event-count">
+                    0 eventos
+                </span>
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+                            <th>Timestamp</th>
+                            <th>Tipo</th>
+                            <th>Source IP</th>
+                            <th>Destination IP</th>
+                            <th>Protocol</th>
+                            <th>Severity</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="events-table">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <span>
+            CyberMonitor
+        </span>
+
+        <span>
+            Security Monitoring Platform
+        </span>
+
+    </footer>
+
+    <script
+        type="module"
+        src="./js/app.js">
+    </script>
+
+</body>
+
+</html>

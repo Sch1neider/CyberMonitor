@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "timestamp": "2026-09-26T08:15:00Z",
+        "type": "Brute Force",
+        "sourceIP": "192.168.1.45",
+        "destinationIP": "10.0.0.15",
+        "protocol": "SSH",
+        "sourcePort": 49152,
+        "destinationPort": 22,
+        "severity": "HIGH",
+        "status": "OPEN"
+    },
+    {
+        "id": 2,
+        "timestamp": "2026-09-26T08:23:00Z",
+        "type": "Port Scan",
+        "sourceIP": "172.16.0.23",
+        "destinationIP": "10.0.0.20",
+        "protocol": "TCP",
+        "sourcePort": 45321,
+        "destinationPort": 443,
+        "severity": "MEDIUM",
+        "status": "OPEN"
+    },
+    {
+        "id": 3,
+        "timestamp": "2026-09-26T08:41:00Z",
+        "type": "Malware",
+        "sourceIP": "192.168.1.87",
+        "destinationIP": "10.0.0.30",
+        "protocol": "HTTP",
+        "sourcePort": 52144,
+        "destinationPort": 80,
+        "severity": "CRITICAL",
+        "status": "OPEN"
+    },
+    {
+        "id": 4,
+        "timestamp": "2026-09-26T09:02:00Z",
+        "type": "DDoS",
+        "sourceIP": "203.0.113.45",
+        "destinationIP": "10.0.0.10",
+        "protocol": "TCP",
+        "sourcePort": 44321,
+        "destinationPort": 443,
+        "severity": "CRITICAL",
+        "status": "INVESTIGATING"
+    },
+    {
+        "id": 5,
+        "timestamp": "2026-09-26T09:18:00Z",
+        "type": "Unauthorized Access",
+        "sourceIP": "10.10.20.55",
+        "destinationIP": "10.0.0.15",
+        "protocol": "SSH",
+        "sourcePort": 51222,
+        "destinationPort": 22,
+        "severity": "HIGH",
+        "status": "RESOLVED"
+    },
+    {
+        "id": 6,
+        "timestamp": "2026-09-26T09:37:00Z",
+        "type": "Suspicious Traffic",
+        "sourceIP": "172.16.10.12",
+        "destinationIP": "10.0.0.25",
+        "protocol": "UDP",
+        "sourcePort": 54321,
+        "destinationPort": 53,
+        "severity": "LOW",
+        "status": "RESOLVED"
+    },
+    {
+        "id": 7,
+        "timestamp": "2026-09-26T10:04:00Z",
+        "type": "Brute Force",
+        "sourceIP": "198.51.100.17",
+        "destinationIP": "10.0.0.15",
+        "protocol": "SSH",
+        "sourcePort": 49221,
+        "destinationPort": 22,
+        "severity": "HIGH",
+        "status": "OPEN"
+    },
+    {
+        "id": 8,
+        "timestamp": "2026-09-26T10:21:00Z",
+        "type": "Port Scan",
+        "sourceIP": "203.0.113.72",
+        "destinationIP": "10.0.0.50",
+        "protocol": "TCP",
+        "sourcePort": 41231,
+        "destinationPort": 3389,
+        "severity": "MEDIUM",
+        "status": "OPEN"
+    },
+    {
+        "id": 9,
+        "timestamp": "2026-09-26T10:48:00Z",
+        "type": "Malware",
+        "sourceIP": "192.168.1.103",
+        "destinationIP": "10.0.0.30",
+        "protocol": "HTTPS",
+        "sourcePort": 53122,
+        "destinationPort": 443,
+        "severity": "CRITICAL",
+        "status": "INVESTIGATING"
+    },
+    {
+        "id": 10,
+        "timestamp": "2026-09-26T11:15:00Z",
+        "type": "Suspicious Traffic",
+        "sourceIP": "172.16.5.33",
+        "destinationIP": "10.0.0.40",
+        "protocol": "DNS",
+        "sourcePort": 53211,
+        "destinationPort": 53,
+        "severity": "LOW",
+        "status": "RESOLVED"
+    }
+]
